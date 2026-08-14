@@ -187,9 +187,11 @@ def generate_ai_explanation(predicted_class: str, confidence: float, probabiliti
         with request.urlopen(req, timeout=30) as response:
             response_data = json.loads(response.read().decode("utf-8"))
             explanation = response_data["choices"][0]["message"]["content"].strip()
+            logger.info(f"OpenRouter explanation generated successfully")
             return explanation, "openrouter"
     except (urllib_error.URLError, urllib_error.HTTPError, KeyError, ValueError) as exc:
-        logger.warning(f"OpenRouter explanation generation failed: {exc}")
+        logger.error(f"OpenRouter explanation generation failed: {exc}")
+        logger.error(f"API Key format: {OPENROUTER_API_KEY[:20] if OPENROUTER_API_KEY else 'EMPTY'}...")
         return fallback, "fallback"
 
 
