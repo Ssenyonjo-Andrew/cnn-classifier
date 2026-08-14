@@ -31,7 +31,7 @@ export const Sidebar = ({
             <span className="text-emerald-400 text-lg">🌿</span>
           </div> */}
           <div>
-            <h1 className="text-white font-semibold text-base leading-tight">Multi-Crop Guard</h1>
+            <h1 className="text-white font-semibold text-base leading-tight">Maize Guard</h1>
             <p className="text-[11px] text-emerald-500/70">AI disease detection</p>
           </div>
         </div>
