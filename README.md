@@ -4,13 +4,13 @@ A professional, production-ready web application for CNN-based image classificat
 
 ## Features
 
-✨ **Modern UI**
+ **Modern UI**
 - Clean, professional dark/light mode design
 - Responsive layout (mobile, tablet, desktop)
 - Smooth animations and transitions
 - Lucide React icons
 
-🚀 **Backend**
+ **Backend**
 - FastAPI with automatic documentation
 - TensorFlow/Keras model loading
 - Image preprocessing and normalization
@@ -18,7 +18,7 @@ A professional, production-ready web application for CNN-based image classificat
 - Comprehensive error handling
 - Health check and model info endpoints
 
-📸 **Frontend**
+ **Frontend**
 - Drag & drop image upload
 - Real-time image preview
 - Loading animations
@@ -32,11 +32,11 @@ A professional, production-ready web application for CNN-based image classificat
 ```
 cnn-classifier/
 ├── backend/
-│   ├── main.py                 # FastAPI application
-│   ├── config.py               # Configuration & settings
-│   ├── requirements.txt         # Python dependencies
+│   ├── main.py                 
+│   ├── config.py               
+│   ├── requirements.txt         
 │   ├── model/
-│   │   └── your_model.h5       # Your trained model (add here)
+│   │   └── your_model.h5       
 │   └── .gitignore
 ├── frontend/
 │   ├── src/
@@ -45,9 +45,9 @@ cnn-classifier/
 │   │   │   ├── PredictionResult.tsx
 │   │   │   └── Navbar.tsx
 │   │   ├── lib/
-│   │   │   └── api.ts          # API client
+│   │   │   └── api.ts         
 │   │   ├── types/
-│   │   │   └── index.ts        # TypeScript types
+│   │   │   └── index.ts        
 │   │   ├── App.tsx
 │   │   ├── main.tsx
 │   │   └── index.css
@@ -57,7 +57,7 @@ cnn-classifier/
 │   ├── tailwind.config.js
 │   ├── tsconfig.json
 │   └── .gitignore
-├── docker-compose.yml          # Docker Compose (optional)
+├── docker-compose.yml          
 └── README.md
 ```
 
@@ -324,4 +324,4 @@ For issues or questions, check the project structure and ensure all configuratio
 
 ---
 
-**Ready to use!** Just add your trained model to `backend/model/` and update the configuration. 🚀
+**Ready to use!** Just add your trained model to `backend/model/` and update the configuration. 
