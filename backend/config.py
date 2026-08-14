@@ -4,6 +4,10 @@ Configuration file for CNN model and application settings
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Model settings
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model", "maizeguard_final.h5")
