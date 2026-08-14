@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: cnn-classifier-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./backend:/app
+      - ./backend/model:/app/model
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - cnn-network
+
+  frontend:
+    build: ./frontend
+    container_name: cnn-classifier-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    command: npm run dev
+    depends_on:
+      - backend
+    networks:
+      - cnn-network
+
+networks:
+  cnn-network:
+    driver: bridge
